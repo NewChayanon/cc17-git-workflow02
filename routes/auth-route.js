@@ -1,10 +1,13 @@
-const { createRouter } = require('react-router-dom');
-const authRouter = createRouter();
+const express = require("express");
+const authRouter = express.Router();
 
-authRouter.get('/getUser')
-authRouter.post('/register',(req,res,next)=>{
-    res.json({msg:'Register...'})
-})
+authRouter.get("/getUser");
+authRouter.post("/register", (req, res, next) => {
+  res.json({ msg: "Register..." });
+});
 
-module.exports = authRouter
+authRouter.post("/login", (req, res, next) => {
+  res.status(200).json({ msg: "login success" });
+});
 
+module.exports = authRouter;
