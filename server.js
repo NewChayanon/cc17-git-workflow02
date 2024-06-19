@@ -6,7 +6,7 @@ const authRouter = require("./routes/auth-route");
 
 const app = express();
 
-app.use("auth", authRouter);
+app.use("/auth", authRouter);
 
 app.use(notFound);
 app.use(errorMiddleware);
