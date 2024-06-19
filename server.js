@@ -10,6 +10,7 @@ app.use('/auth',authRouter)
 
 app.use(notFound)
 app.use(errorMiddleware);
+
 const port = 8000
 app.listen(8000,()=>console.log("Server on",port))
 
