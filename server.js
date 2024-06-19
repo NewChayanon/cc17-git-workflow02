@@ -1,6 +1,8 @@
-const express = require('express')
+const express = require("express");
+const errorMiddleware = require("./middlewares/error");
 
-const app = express()
+const app = express();
 
-const port = 8000
-app.listen(8000,()=>console.log("Server on",port))
+app.use(errorMiddleware);
+const port = 8000;
+app.listen(8000, () => console.log("Server on", port));
